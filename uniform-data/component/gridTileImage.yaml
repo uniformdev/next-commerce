@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: gridTileImage
+name: Grid Tile Image
+icon: image
+parameters:
+  - id: name
+    name: Name
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: price
+    name: Price
+    type: number
+    helpText: ''
+    typeConfig:
+      decimal: true
+  - id: image
+    name: Image
+    type: image
+    helpText: ''
+    typeConfig: null
+  - id: url
+    name: URL
+    type: link
+    helpText: ''
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+  - id: full
+    name: Full Height?
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+useTeamPermissions: true
+slots: []
+titleParameter: name
+canBeComposition: false
+created: '2023-11-11T23:10:05.212625+00:00'
+updated: '2023-11-11T23:10:05.212625+00:00'

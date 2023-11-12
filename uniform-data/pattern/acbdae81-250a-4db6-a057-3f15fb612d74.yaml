@@ -1,0 +1,39 @@
+composition:
+  _name: Product Grid Item
+  _id: acbdae81-250a-4db6-a057-3f15fb612d74
+  type: gridTileImage
+  parameters:
+    url:
+      type: link
+      value:
+        path: /products/${#jptr:/Product/0/slug}
+        type: url
+    name:
+      type: text
+      value: ${#jptr:/Product/0/name}
+    image:
+      type: image
+      value: ${#jptr:/Product/0/images/0/url}
+    price:
+      type: number
+      value: ${#jptr:/Product/0/price}
+  _dataResources:
+    Product:
+      type: product
+      variables:
+        productIds: '80'
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      url: 'yes'
+      full: 'yes'
+      name: 'yes'
+      image: 'yes'
+      price: 'yes'
+created: '2023-11-12T00:24:09.653839+00:00'
+modified: '2023-11-12T01:25:42.665056+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1699752308/mqccnhksk5lme9u9n5kd.png
+categoryId: 4e552690-edb9-47a0-8a71-d5752a28365b

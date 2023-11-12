@@ -1,0 +1,58 @@
+composition:
+  _name: Product Collection
+  _id: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+  type: productTileGrid
+  variant: carousel
+  parameters:
+    title:
+      type: text
+      value: Your new collection name
+  slots:
+    tiles:
+      - _id: b9acd9e4-ec89-4f9b-b619-00827fb81c45
+        type: $loop
+        slots:
+          body:
+            - _id: b1fb4d6f-9045-494b-b28a-5c1ef285d614
+              type: gridTileImage
+              parameters:
+                url:
+                  type: link
+                  value:
+                    path: /products/${#jptr:/Product Query data Loop Item/slug}
+                    type: url
+                name:
+                  type: text
+                  value: ${#jptr:/Product Query data Loop Item/name}
+                image:
+                  type: image
+                  value: ${#jptr:/Product Query data Loop Item/images/0/url}
+                price:
+                  type: number
+                  value: ${#jptr:/Product Query data Loop Item/price}
+        _dataResources:
+          Product Query data Loop Item:
+            type: sys-reserved-loop
+            variables:
+              connectedData: /Product Query/data
+  _dataResources:
+    Product Query:
+      type: productQuery
+      variables:
+        page: '1'
+        limit: '5'
+        keyword: ''
+        sortField: price
+        categoryId: '23'
+        sortDirection: desc
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      title: 'yes'
+created: '2023-11-12T00:28:34.245636+00:00'
+modified: '2023-11-12T01:23:11.923487+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1699752148/ullsk97jt7bfk95myn9u.png
+categoryId: 4e552690-edb9-47a0-8a71-d5752a28365b

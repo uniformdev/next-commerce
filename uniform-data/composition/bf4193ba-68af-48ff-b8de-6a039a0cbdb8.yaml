@@ -1,0 +1,83 @@
+composition:
+  _name: Coffee Machines
+  _id: bf4193ba-68af-48ff-b8de-6a039a0cbdb8
+  _slug: espresso-machines
+  type: page
+  parameters:
+    metaTitle:
+      type: text
+      value: Espresso Machines
+  slots:
+    content:
+      - _id: 50e0a79f-7ce0-4a3b-85f2-5abb9ed92b37
+        type: productTileGrid
+        slots:
+          tiles:
+            - _id: 3ffd9ee0-5cc9-4ae2-ba6b-3ff847e9bb2d
+              type: gridTileImage
+              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _dataResources:
+                Product:
+                  type: product
+                  variables:
+                    productIds: '117'
+            - _id: 3a3fa415-abb0-4c62-b8dc-6b9573c4180a
+              type: gridTileImage
+              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _dataResources:
+                Product:
+                  type: product
+                  variables:
+                    productIds: '118'
+            - _id: 8a2d09ed-d78c-41eb-aa72-4424a19d7d30
+              type: gridTileImage
+              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _dataResources:
+                Product:
+                  type: product
+                  variables:
+                    productIds: '145'
+        parameters:
+          title:
+            type: text
+            value: Featured Machines
+      - _id: 8e7952a3-ad03-4294-ad0c-48da75a023d3
+        type: productTileGrid
+        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+        _dataResources:
+          Product Query:
+            type: productQuery
+            variables:
+              page: '1'
+              limit: '5'
+              keyword: ''
+              sortField: price
+              categoryId: '23'
+              sortDirection: asc
+      - _id: c8f6187f-7603-46a3-ab25-6989ca396620
+        type: productTileGrid
+        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+        _dataResources:
+          Product Query:
+            type: productQuery
+            variables:
+              page: '1'
+              limit: '5'
+              keyword: ''
+              sortField: price
+              categoryId: '23'
+              sortDirection: desc
+  _overrides:
+    8e7952a3-ad03-4294-ad0c-48da75a023d3:
+      parameters:
+        title:
+          type: text
+          value: Most affordable way to make coffee
+    c8f6187f-7603-46a3-ab25-6989ca396620:
+      parameters:
+        title:
+          type: text
+          value: If budget is not an issue
+created: '2023-11-12T01:28:43.005139+00:00'
+modified: '2023-11-12T01:38:24.412068+00:00'
+pattern: false

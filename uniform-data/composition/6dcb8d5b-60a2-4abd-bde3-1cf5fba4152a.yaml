@@ -1,0 +1,65 @@
+composition:
+  _name: Coffee Beans
+  _id: 6dcb8d5b-60a2-4abd-bde3-1cf5fba4152a
+  _slug: coffee-beans
+  type: page
+  parameters:
+    metaTitle:
+      type: text
+      value: Coffee Beans
+  slots:
+    content:
+      - _id: 75fc8912-8b3b-407a-881b-5a32606ab39f
+        type: productTileGrid
+        slots:
+          tiles:
+            - _id: b0c0b1cc-95d3-42a9-8cb0-be31b327704e
+              type: gridTileImage
+              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _dataResources:
+                Product:
+                  type: product
+                  variables:
+                    productIds: '81'
+            - _id: 5a202886-6684-48a1-9793-15b36f8110c4
+              type: gridTileImage
+              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _dataResources:
+                Product:
+                  type: product
+                  variables:
+                    productIds: '128'
+            - _id: 23f3b557-f847-45be-aa58-f7ed8968be23
+              type: gridTileImage
+              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _dataResources:
+                Product:
+                  type: product
+                  variables:
+                    productIds: '113'
+        parameters:
+          title:
+            type: text
+            value: Featured Beans
+      - _id: 7ddb4278-f9b4-4ac3-9a54-fe64e68a8888
+        type: productTileGrid
+        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+        _dataResources:
+          Product Query:
+            type: productQuery
+            variables:
+              page: '1'
+              limit: '5'
+              keyword: ''
+              sortField: price
+              categoryId: '27'
+              sortDirection: desc
+  _overrides:
+    7ddb4278-f9b4-4ac3-9a54-fe64e68a8888:
+      parameters:
+        title:
+          type: text
+          value: Beans for the exquisite taste
+created: '2023-11-12T01:27:21.333072+00:00'
+modified: '2023-11-12T01:40:25.746477+00:00'
+pattern: false

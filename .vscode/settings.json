@@ -1,0 +1,14 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true,
+    "source.sortMembers": true
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#3D1F55",
+    "titleBar.activeBackground": "#562C77",
+    "titleBar.activeForeground": "#FDFCFE"
+  }
+}

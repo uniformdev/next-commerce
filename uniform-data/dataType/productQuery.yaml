@@ -1,0 +1,61 @@
+id: productQuery
+displayName: Product Query
+ttl: 30
+path: /api/products/get
+custom:
+  proposedName: Product Query
+  selectedCategoryIds:
+    - '23'
+    - '27'
+    - '24'
+  selectedDisplayField: name
+method: GET
+purgeKey: 7955d89e-4709-4d37-9135-4b4b302576af
+archetype: queryProducts
+variables:
+  page:
+    type: text
+    default: '1'
+    displayName: Page
+  limit:
+    type: text
+    default: ''
+    displayName: Limit
+  keyword:
+    type: text
+    default: ''
+    displayName: Keyword
+  sortField:
+    type: text
+    default: ''
+    displayName: Sort Field
+  categoryId:
+    type: text
+    default: ''
+    displayName: Category Id
+  productIds:
+    type: text
+    default: ''
+    helpText: Array of product ids
+    displayName: Product Ids
+  sortDirection:
+    type: text
+    default: ''
+    displayName: Sort Direction
+parameters:
+  - key: id
+    value: ${productIds}
+  - key: categoryId
+    value: ${categoryId}
+  - key: keyword
+    value: ${keyword}
+  - key: sortField
+    value: ${sortField}
+  - key: sortDirection
+    value: ${sortDirection}
+  - key: limit
+    value: ${limit}
+  - key: page
+    value: ${page}
+dataSourceId: mockCommerce
+allowedOnComponents: []

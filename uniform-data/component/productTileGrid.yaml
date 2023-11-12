@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: productTileGrid
+name: Product Tile Grid
+icon: display-grid
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+categoryId: 4e552690-edb9-47a0-8a71-d5752a28365b
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1699752392/dsuo4vdwfypaaqcb5eib.png
+useTeamPermissions: true
+slots:
+  - id: tiles
+    name: Tiles
+    allowedComponents:
+      - gridTileImage
+      - $test
+      - $loop
+      - $personalization
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2023-11-11T23:59:29.025699+00:00'
+updated: '2023-11-12T01:26:58.077156+00:00'
+variants:
+  - id: carousel
+    name: Carousel

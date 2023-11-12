@@ -1,0 +1,126 @@
+composition:
+  _name: Home
+  _id: 26667348-5cd1-4185-b5a0-8413e1e87117
+  _slug: /
+  type: page
+  parameters:
+    metaTitle:
+      type: text
+      value: Home
+  slots:
+    content:
+      - _id: c1c952b1-3985-4537-8bf9-d04b07a17be9
+        type: productTileGrid
+        slots:
+          tiles:
+            - _id: 3c0a66b5-84df-47ca-9331-bc93636a6d16
+              type: $personalization
+              slots:
+                pz:
+                  - _id: c8c76080-c904-4118-918d-03bea5688e22
+                    type: gridTileImage
+                    _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+                    _dataResources:
+                      Product:
+                        type: product
+                        variables:
+                          productIds: '88'
+                  - _id: 5480ecd7-34f4-430f-aa8d-e202bed9030a
+                    type: gridTileImage
+                    _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+                    _dataResources:
+                      Product:
+                        type: product
+                        variables:
+                          productIds: '115'
+              parameters:
+                count:
+                  type: number
+                  value: 1
+                trackingEventName:
+                  type: text
+                  value: Home-Grid Tile Image
+            - _id: 676de7e3-c05c-4a67-a60e-1614fefaf748
+              type: gridTileImage
+              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _dataResources:
+                Product:
+                  type: product
+                  variables:
+                    productIds: '81'
+            - _id: 841995cd-f02f-4427-a01e-6e4b840b6be2
+              type: gridTileImage
+              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _dataResources:
+                Product:
+                  type: product
+                  variables:
+                    productIds: '114'
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Featured Grid
+      - _id: ecb3c9bb-579e-4151-9eb6-cd577932ed35
+        type: productTileGrid
+        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+        _dataResources:
+          Product Query:
+            type: productQuery
+            variables:
+              page: '1'
+              limit: '5'
+              keyword: ''
+              sortField: price
+              categoryId: '27'
+              sortDirection: desc
+      - _id: 3ed05e29-262b-477f-8af0-ce9dcbb2903b
+        type: productTileGrid
+        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+        _dataResources:
+          Product Query:
+            type: productQuery
+            variables:
+              page: '1'
+              limit: '5'
+              keyword: ''
+              sortField: price
+              categoryId: '24'
+              sortDirection: desc
+  _dataResources:
+    Product Content:
+      type: product
+      variables:
+        productIds: '115'
+  _overrides:
+    3ed05e29-262b-477f-8af0-ce9dcbb2903b:
+      parameters:
+        title:
+          type: text
+          value: Our best espresso machine
+    5480ecd7-34f4-430f-aa8d-e202bed9030a:
+      parameters:
+        full:
+          type: checkbox
+          value: true
+    c8c76080-c904-4118-918d-03bea5688e22:
+      parameters:
+        full:
+          type: checkbox
+          value: true
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: hipsters
+                r: 0
+                op: '>'
+            name: 'Grid Tile Image: ${#jptr:/Product/0/name}'
+    ecb3c9bb-579e-4151-9eb6-cd577932ed35:
+      parameters:
+        title:
+          type: text
+          value: Our best beans
+created: '2023-11-07T14:04:55.695592+00:00'
+modified: '2023-11-12T00:40:41.387706+00:00'
+pattern: false
