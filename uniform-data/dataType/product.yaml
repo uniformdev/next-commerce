@@ -57,5 +57,5 @@ parameters:
     value: ${limit}
   - key: page
     value: ${page}
-dataSourceId: mockCommerce
+dataSourceId: fakeCommerce
 allowedOnComponents: []
