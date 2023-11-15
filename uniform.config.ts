@@ -9,6 +9,7 @@ const config: CLIConfiguration = {
     directory: './uniform-data',
     entitiesConfig: {
       composition: {
+        publish: true,
         push: {
           // May be useful to only create new compositions and not update existing ones to avoid accidental overrides
           mode: 'create'
