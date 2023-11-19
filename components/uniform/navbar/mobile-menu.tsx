@@ -6,9 +6,10 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { Fragment, useEffect, useState } from 'react';
 
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Search from './search';
+import Search from '../../layout/navbar/search';
+import { NavItem } from './props';
 
-export default function MobileMenu() {
+export default function MobileMenu({ menu }: { menu: Array<NavItem> }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
@@ -69,17 +70,26 @@ export default function MobileMenu() {
                 >
                   <XMarkIcon className="h-6" />
                 </button>
-
                 <div className="mb-4 w-full">
                   <Search />
                 </div>
-                <ul className="flex w-full flex-col">
-                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
-                    <Link href={'/?utm_audience=hipsters'} onClick={closeMobileMenu}>
-                      For Hipsters campaign
-                    </Link>
-                  </li>
-                </ul>
+                {menu.length ? (
+                  <ul className="flex w-full flex-col">
+                    {menu.map((item: NavItem) => (
+                      <li
+                        className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white"
+                        key={item?.fields?.title?.value}
+                      >
+                        <Link
+                          href={item?.fields?.link?.value?.path || '#'}
+                          onClick={closeMobileMenu}
+                        >
+                          {item?.fields?.title?.value}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </div>
             </Dialog.Panel>
           </Transition.Child>

@@ -1,0 +1,154 @@
+composition:
+  _name: Product Detail Page
+  _id: 5948552e-b747-40a7-b97c-2237f6cb3147
+  _slug: ':product-id'
+  type: productDetailPage
+  parameters:
+    metaTitle:
+      type: text
+      value: >-
+        ${#jptr:/Current Product/0/name} | ${#jptr:/Current
+        Product/0/rootCategories/0} | ${#jptr:/Current
+        Product/0/subCategories/0}
+    metaDescription:
+      type: text
+      value: ${#jptr:/Current Product/0/description}
+  slots:
+    footer:
+      - _id: 2b5e19c3-a35b-4957-8795-b994cb4b611d
+        type: footer
+        _pattern: 63c9777f-621a-4be9-a61f-09b10b63db92
+    header:
+      - _id: ace0724b-b0fa-48b6-b6e4-329270890919
+        type: navBar
+        _pattern: e6ed413a-f24e-4be1-aff4-5669be40e960
+      - _id: 0cd9787f-5290-4209-aba6-6e7f2af557ed
+        type: jsonld
+        parameters:
+          name:
+            type: text
+            value: ${#jptr:/Current Product/0/name}
+          type:
+            type: select
+            value: Product
+          image:
+            type: image
+            value: ${#jptr:/Current Product/0/images/0/url}
+          lowPrice:
+            type: number
+            value: ${#jptr:/Current Product/0/price}
+          highPrice:
+            type: number
+            value: ${#jptr:/Current Product/0/price}
+          description:
+            type: text
+            value: ${#jptr:/Current Product/0/description}
+          availability:
+            type: checkbox
+            value: true
+          priceCurrency:
+            type: select
+            value: USD
+    lowerRail:
+      - _id: 2b62f556-150f-4a15-bd3e-896f695029a5
+        type: productTileGrid
+        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+        _dataResources:
+          Product Query:
+            type: productQuery
+            variables:
+              page: '1'
+              limit: '5'
+              keyword: ''
+              sortField: ''
+              categoryId: '24'
+              sortDirection: asc
+    leftContent:
+      - _id: 46c6f9f6-85d6-46c8-917d-913e88fa9046
+        type: gallery
+        parameters:
+          images:
+            type: $block
+            value:
+              - _id: 34fdee0a-6c11-41b5-aef1-63e4bc5a3c2b
+                type: $loop
+                fields:
+                  body:
+                    type: $block
+                    value:
+                      - _id: ca4db8f3-db36-46b5-88ff-4fc4c6b2e2c1
+                        type: productImage
+                        fields:
+                          src:
+                            type: image
+                            value: ${#jptr:/Product Images/url}
+                          altText:
+                            type: text
+                            value: ${#jptr:/Current Product/0/name}
+                _dataResources:
+                  Product Images:
+                    type: sys-reserved-loop
+                    variables:
+                      connectedData: /Current Product/0/images
+    rightContent:
+      - _id: ae57b285-bd91-40a0-92f6-2db7eba8b7cd
+        type: productDescription
+        parameters:
+          price:
+            type: number
+            value: ${#jptr:/Current Product/0/price}
+          title:
+            type: text
+            value: ${#jptr:/Current Product/0/name}
+          currency:
+            type: select
+            value: USD
+          variants:
+            type: $block
+            value:
+              - _id: 99447183-06e6-4388-9d1a-887f04d72bdd
+                type: $loop
+                fields:
+                  body:
+                    type: $block
+                    value:
+                      - _id: 57a0b3fa-a717-403c-bb4c-8b7e48e8fbea
+                        type: productVariant
+                        fields:
+                          id:
+                            type: text
+                            value: ${#jptr:/Current Product Loop Item/id}
+                          price:
+                            type: number
+                            value: ${#jptr:/Current Product Loop Item/price}
+                          title:
+                            type: text
+                            value: ${#jptr:/Current Product Loop Item/name}
+                          availableForSale:
+                            type: checkbox
+                            value: true
+                _dataResources:
+                  Current Product Loop Item:
+                    type: sys-reserved-loop
+                    variables:
+                      connectedData: /Current Product
+          description:
+            type: text
+            value: ${#jptr:/Current Product/0/description}
+          availableForSale:
+            type: checkbox
+            value: true
+  _dataResources:
+    Current Product:
+      type: productBySlug
+      variables:
+        value: ${product-id}
+  _overrides:
+    2b62f556-150f-4a15-bd3e-896f695029a5:
+      parameters:
+        title:
+          type: text
+          value: Similar espresso machines
+created: '2023-11-19T18:59:18.88668+00:00'
+modified: '2023-11-19T19:36:30.452398+00:00'
+pattern: false

@@ -26,7 +26,9 @@ const config: CLIConfiguration = {
       quirk: {},
       projectMapDefinition: {},
       projectMapNode: {},
-      redirect: {}
+      redirect: {},
+      contentType: {},
+      asset: {}
     }
   }
 };

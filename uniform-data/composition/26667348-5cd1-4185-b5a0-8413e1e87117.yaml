@@ -7,17 +7,30 @@ composition:
     metaTitle:
       type: text
       value: Home
+    metaDescription:
+      type: text
+      value: >-
+        High-performance ecommerce store built with Next.js, Vercel, and
+        Uniform.
   slots:
+    footer:
+      - _id: 53e3d3fe-b382-4607-b551-d7a759b3811d
+        type: footer
+        _pattern: 63c9777f-621a-4be9-a61f-09b10b63db92
+    header:
+      - _id: 60732154-8dc0-4d03-8149-2c07550960ad
+        type: navBar
+        _pattern: e6ed413a-f24e-4be1-aff4-5669be40e960
     content:
-      - _id: c1c952b1-3985-4537-8bf9-d04b07a17be9
+      - _id: f3396ea0-8dbc-4bda-a5ba-9e821f331814
         type: productTileGrid
         slots:
           tiles:
-            - _id: 3c0a66b5-84df-47ca-9331-bc93636a6d16
+            - _id: 6fb96239-a230-43df-82f3-01fcf883f24e
               type: $personalization
               slots:
                 pz:
-                  - _id: c8c76080-c904-4118-918d-03bea5688e22
+                  - _id: 17bcb2f4-b639-4965-ae69-5207b7d30470
                     type: gridTileImage
                     _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
                     _dataResources:
@@ -25,7 +38,7 @@ composition:
                         type: product
                         variables:
                           productIds: '88'
-                  - _id: 5480ecd7-34f4-430f-aa8d-e202bed9030a
+                  - _id: 7c60ab41-b018-49ec-b8b1-0889b8f8ff6e
                     type: gridTileImage
                     _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
                     _dataResources:
@@ -40,15 +53,15 @@ composition:
                 trackingEventName:
                   type: text
                   value: Home-Grid Tile Image
-            - _id: 676de7e3-c05c-4a67-a60e-1614fefaf748
+            - _id: 1e61536a-e50a-45c2-9ee7-d95a646b8bd0
               type: gridTileImage
               _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
               _dataResources:
                 Product:
                   type: product
                   variables:
-                    productIds: '81'
-            - _id: 841995cd-f02f-4427-a01e-6e4b840b6be2
+                    productIds: '80'
+            - _id: 2ba736e1-ca8b-4319-b05d-4d132b050172
               type: gridTileImage
               _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
               _dataResources:
@@ -56,25 +69,7 @@ composition:
                   type: product
                   variables:
                     productIds: '114'
-        variant: ''
-        parameters:
-          title:
-            type: text
-            value: Featured Grid
-      - _id: ecb3c9bb-579e-4151-9eb6-cd577932ed35
-        type: productTileGrid
-        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
-        _dataResources:
-          Product Query:
-            type: productQuery
-            variables:
-              page: '1'
-              limit: '5'
-              keyword: ''
-              sortField: price
-              categoryId: '27'
-              sortDirection: desc
-      - _id: 3ed05e29-262b-477f-8af0-ce9dcbb2903b
+      - _id: 7ac05a66-e776-480f-91dd-4ac4b0d91b2e
         type: productTileGrid
         _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
         _dataResources:
@@ -87,27 +82,27 @@ composition:
               sortField: price
               categoryId: '24'
               sortDirection: desc
+      - _id: fd04411e-94d5-49b3-900e-aaa1ec10c24f
+        type: productTileGrid
+        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
+        _dataResources:
+          Product Query:
+            type: productQuery
+            variables:
+              page: '1'
+              limit: '5'
+              keyword: ''
+              sortField: price
+              categoryId: '27'
+              sortDirection: desc
   _dataResources:
     Product Content:
       type: product
       variables:
         productIds: '115'
   _overrides:
-    3ed05e29-262b-477f-8af0-ce9dcbb2903b:
+    17bcb2f4-b639-4965-ae69-5207b7d30470:
       parameters:
-        title:
-          type: text
-          value: Our best espresso machine
-    5480ecd7-34f4-430f-aa8d-e202bed9030a:
-      parameters:
-        full:
-          type: checkbox
-          value: true
-    c8c76080-c904-4118-918d-03bea5688e22:
-      parameters:
-        full:
-          type: checkbox
-          value: true
         $pzCrit:
           type: $pzCrit
           value:
@@ -116,11 +111,21 @@ composition:
                 r: 0
                 op: '>'
             name: 'Grid Tile Image: ${#jptr:/Product/0/name}'
-    ecb3c9bb-579e-4151-9eb6-cd577932ed35:
+    7ac05a66-e776-480f-91dd-4ac4b0d91b2e:
       parameters:
         title:
           type: text
-          value: Our best beans
-created: '2023-11-07T14:04:55.695592+00:00'
-modified: '2023-11-12T00:40:41.387706+00:00'
+          value: Our top espresso makers
+    7c60ab41-b018-49ec-b8b1-0889b8f8ff6e:
+      parameters:
+        name:
+          type: text
+          value: ${#jptr:/Product/0/name}
+    fd04411e-94d5-49b3-900e-aaa1ec10c24f:
+      parameters:
+        title:
+          type: text
+          value: Our cool beans
+created: '2023-11-19T18:59:18.528852+00:00'
+modified: '2023-11-19T19:39:50.750824+00:00'
 pattern: false

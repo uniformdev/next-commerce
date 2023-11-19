@@ -1,3 +1,3 @@
 export type Parameters = {};
 
-export type Slots = "content";
+export type Slots = 'header' | 'content' | 'footer';

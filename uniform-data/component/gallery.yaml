@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: gallery
+name: Gallery
+icon: carousel
+parameters:
+  - id: images
+    name: Images
+    type: $block
+    helpText: ''
+    typeConfig:
+      max: 10
+      min: 1
+      required: true
+      allowedTypes:
+        - productImage
+        - $loop
+categoryId: 4e552690-edb9-47a0-8a71-d5752a28365b
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-11-18T22:26:40.616075+00:00'
+updated: '2023-11-18T23:00:00.694667+00:00'

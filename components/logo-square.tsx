@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import LogoIcon from './icons/logo';
+import Image from 'next/image';
 
-export default function LogoSquare({ size }: { size?: 'sm' | undefined }) {
+export default function LogoSquare({ logo, size }: { size?: 'sm' | undefined; logo: any }) {
   return (
     <div
       className={clsx(
@@ -12,11 +12,16 @@ export default function LogoSquare({ size }: { size?: 'sm' | undefined }) {
         }
       )}
     >
-      <LogoIcon
+      <Image
+        src={logo?.[0]?.url}
         className={clsx({
           'h-[16px] w-[16px]': !size,
           'h-[10px] w-[10px]': size === 'sm'
         })}
+        width={size === 'sm' ? 10 : 16}
+        height={size === 'sm' ? 10 : 16}
+        alt="Next Commerce"
+        loading="eager"
       />
     </div>
   );

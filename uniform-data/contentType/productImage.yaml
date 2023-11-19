@@ -1,0 +1,26 @@
+id: productImage
+name: Product Image
+created: '2023-11-19T19:01:41.22982+00:00'
+updated: '2023-11-19T19:01:41.22982+00:00'
+slugSettings:
+  required: 'no'
+fields:
+  - id: src
+    name: Image Src
+    type: image
+    helpText: ''
+    typeConfig: null
+  - id: altText
+    name: Alt Text
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: type
+    name: Type
+    type: text
+    helpText: ''
+    typeConfig: null
+entryName: altText
+description: ''
+icon: image
+type: block

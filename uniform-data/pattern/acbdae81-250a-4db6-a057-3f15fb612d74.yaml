@@ -1,5 +1,5 @@
 composition:
-  _name: Product Grid Item
+  _name: Product Grid Tile
   _id: acbdae81-250a-4db6-a057-3f15fb612d74
   type: gridTileImage
   parameters:
@@ -31,8 +31,8 @@ composition:
       name: 'yes'
       image: 'yes'
       price: 'yes'
-created: '2023-11-12T00:24:09.653839+00:00'
-modified: '2023-11-12T01:25:42.665056+00:00'
+created: '2023-11-19T18:59:12.813159+00:00'
+modified: '2023-11-19T19:20:46.525657+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1699752308/mqccnhksk5lme9u9n5kd.png

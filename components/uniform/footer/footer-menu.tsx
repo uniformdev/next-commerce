@@ -1,23 +1,24 @@
 'use client';
 
 import clsx from 'clsx';
-import { Menu } from 'lib/shopify/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { NavItem } from '../navbar/props';
 
-const FooterMenuItem = ({ item }: { item: Menu }) => {
+const FooterMenuItem = ({ item }: { item: NavItem }) => {
+  const path = item?.fields?.link?.value?.path;
   const pathname = usePathname();
-  const [active, setActive] = useState(pathname === item.path);
+  const [active, setActive] = useState(pathname === path);
 
   useEffect(() => {
-    setActive(pathname === item.path);
-  }, [pathname, item.path]);
+    setActive(pathname === path);
+  }, [pathname, path]);
 
   return (
     <li>
       <Link
-        href={item.path}
+        href={path ?? '#'}
         className={clsx(
           'block p-2 text-lg underline-offset-4 hover:text-black hover:underline dark:hover:text-neutral-300 md:inline-block md:text-sm',
           {
@@ -25,20 +26,19 @@ const FooterMenuItem = ({ item }: { item: Menu }) => {
           }
         )}
       >
-        {item.title}
+        {item?.fields?.title?.value}
       </Link>
     </li>
   );
 };
 
-export default function FooterMenu() {
+export default function FooterMenu({ menu }: { menu: Array<NavItem> }) {
   return (
     <nav>
       <ul>
-        <FooterMenuItem
-          key="0"
-          item={{ title: 'Hipster campaign', path: '?utm_audience=hipsters' }}
-        />
+        {menu.map((item: NavItem) => {
+          return <FooterMenuItem key={item?.fields?.title?.value} item={item} />;
+        })}
       </ul>
     </nav>
   );

@@ -1,0 +1,20 @@
+id: productBySlug
+displayName: Product by Slug
+ttl: 30
+path: /api/products/get-by-field
+custom:
+  searchFieldName: slug
+  selectedDisplayField: name
+method: GET
+purgeKey: 33f29600-ad58-42e5-9a57-08b3a668e402
+archetype: productsByField
+variables:
+  value:
+    type: text
+    default: ''
+    displayName: Value for search
+parameters:
+  - key: slug
+    value: ${value}
+dataSourceId: fakeCommerce
+allowedOnComponents: []

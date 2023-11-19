@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: navBar
+name: Nav Bar
+icon: toolbar-top
+parameters:
+  - id: siteName
+    name: Site Name
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: logo
+    name: Logo
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      required: true
+  - id: menu
+    name: Menu
+    type: $block
+    helpText: ''
+    typeConfig:
+      max: 5
+      min: 1
+      required: true
+      allowedTypes:
+        - navLink
+categoryId: 8ec2b904-87b0-488a-88a3-e954f3ed9ff8
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-11-19T00:33:45.94601+00:00'
+updated: '2023-11-19T01:22:18.631827+00:00'

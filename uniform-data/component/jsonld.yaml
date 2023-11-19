@@ -1,0 +1,68 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: jsonld
+name: Json+Ld
+icon: search-found
+parameters:
+  - id: name
+    name: Name
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: type
+    name: '@type'
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Product
+          value: Product
+        - text: Collection
+          value: Collection
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: 5
+  - id: image
+    name: Image
+    type: image
+    helpText: ''
+    typeConfig: null
+  - id: availability
+    name: Availability
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+  - id: priceCurrency
+    name: Price Currency
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: USD
+          value: USD
+        - text: EUR
+          value: EUR
+  - id: highPrice
+    name: High Price
+    type: number
+    helpText: ''
+    typeConfig:
+      decimal: true
+  - id: lowPrice
+    name: Low Price
+    type: number
+    helpText: ''
+    typeConfig:
+      decimal: true
+categoryId: b77f02ae-e5d1-4bdc-9f9e-2f94cd6b752e
+useTeamPermissions: true
+slots: []
+titleParameter: name
+canBeComposition: false
+created: '2023-11-19T00:06:35.811022+00:00'
+updated: '2023-11-19T00:06:35.811022+00:00'

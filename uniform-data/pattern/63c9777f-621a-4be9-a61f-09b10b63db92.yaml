@@ -1,0 +1,135 @@
+composition:
+  _name: Global Footer
+  _id: 63c9777f-621a-4be9-a61f-09b10b63db92
+  type: footer
+  parameters:
+    logo:
+      type: asset
+      value:
+        - id: aa5f56dd-73e8-4186-8682-3d14309a64cb
+          url: >-
+            https://img.uniform.global/p/hDbcapyZRbaodHUloPwpHg/EvBUV_kETO-zj2JY0R66CA-Uniform_Icon_White_uceyub-(2).svg
+          type: image
+          title: Uniform_Icon_White_uceyub-(2).svg
+          width: 150
+          height: 150
+          source: uniform-assets
+          mediaType: image/svg+xml
+    menu:
+      type: $block
+      value:
+        - _id: b6846c60-a871-4b9d-a2de-a1109ca61acd
+          type: navLink
+          fields:
+            link:
+              type: link
+              value:
+                path: /
+                type: projectMapNode
+                nodeId: ed715901-bc49-41f1-b103-75eefcba2c9b
+                projectMapId: 8a35c419-5150-4f76-aa21-7e4976c9dfcb
+            title:
+              type: text
+              value: Home
+        - _id: 5fc26e34-cb28-45a3-ab3a-8db81f2439d0
+          type: navLink
+          fields:
+            link:
+              type: link
+              value:
+                path: /machines
+                type: projectMapNode
+                nodeId: 712c1d4e-918f-48e4-ba78-e8db99e5e450
+                projectMapId: 8a35c419-5150-4f76-aa21-7e4976c9dfcb
+            title:
+              type: text
+              value: Machines
+        - _id: 46876f36-5175-4281-af45-ed53fd148532
+          type: navLink
+          fields:
+            link:
+              type: link
+              value:
+                path: /beans
+                type: projectMapNode
+                nodeId: aeb04bbb-22e2-44e0-83d2-061152beb904
+                projectMapId: 8a35c419-5150-4f76-aa21-7e4976c9dfcb
+            title:
+              type: text
+              value: Beans
+    ctaLink:
+      type: link
+      value:
+        path: https://github.com/uniformdev/next-commerce
+        type: url
+    ctaImage:
+      type: asset
+      value:
+        - id: 4c3b2436-bc8b-40ca-b296-9cc9df63c11c
+          url: >-
+            https://img.uniform.global/p/hDbcapyZRbaodHUloPwpHg/tXeL72I9Qa6nP4Jwa4yMSg-github-mark.png
+          type: image
+          title: github-mark.png
+          width: 240
+          height: 240
+          source: uniform-assets
+          mediaType: image/png
+          description: ''
+    ctaTitle:
+      type: text
+      value: Clone
+    siteName:
+      type: text
+      value: Next Commerce
+    footerText:
+      type: richText
+      value:
+        root:
+          type: root
+          format: ''
+          indent: 0
+          version: 1
+          children:
+            - type: paragraph
+              format: ''
+              indent: 0
+              version: 1
+              children:
+                - mode: normal
+                  text: "©\_$dateTime.now\_Uniform Systems, Inc.\_All rights reserved."
+                  type: text
+                  style: ''
+                  detail: 0
+                  format: 0
+                  version: 1
+              direction: ltr
+            - type: paragraph
+              format: ''
+              indent: 0
+              version: 1
+              children:
+                - mode: normal
+                  text: Designed in California
+                  type: text
+                  style: ''
+                  detail: 0
+                  format: 0
+                  version: 1
+              direction: ltr
+            - type: paragraph
+              format: ''
+              indent: 0
+              version: 1
+              children:
+                - mode: normal
+                  text: Crafted by Vercel enhanced by Uniform
+                  type: text
+                  style: ''
+                  detail: 0
+                  format: 0
+                  version: 1
+              direction: ltr
+          direction: ltr
+created: '2023-11-19T01:17:11.501417+00:00'
+modified: '2023-11-19T01:29:25.283989+00:00'
+pattern: true

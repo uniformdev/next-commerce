@@ -17,17 +17,18 @@ slots:
   - id: tiles
     name: Tiles
     allowedComponents:
-      - gridTileImage
       - $test
       - $loop
       - $personalization
+      - $p:acbdae81-250a-4db6-a057-3f15fb612d74
+      - gridTileImage
     allowAllComponents: false
     inheritAllowedComponents: false
-    patternsInAllowedComponents: false
+    patternsInAllowedComponents: true
 titleParameter: title
 canBeComposition: false
-created: '2023-11-11T23:59:29.025699+00:00'
-updated: '2023-11-12T01:26:58.077156+00:00'
+created: '2023-11-19T19:47:57.898125+00:00'
+updated: '2023-11-19T19:55:53.066209+00:00'
 variants:
   - id: carousel
     name: Carousel

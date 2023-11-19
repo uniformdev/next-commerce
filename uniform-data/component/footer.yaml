@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: footer
+name: Footer
+icon: toolbar-bottom
+parameters:
+  - id: siteName
+    name: Site Name
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: footerText
+    name: Footer Text
+    type: richText
+    helpText: ''
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+  - id: logo
+    name: Logo
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+  - id: menu
+    name: Menu
+    type: $block
+    helpText: ''
+    typeConfig:
+      max: 10
+      min: 1
+      required: true
+      allowedTypes:
+        - navLink
+  - id: group_callToAction
+    name: Call to Action
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - ctaLink
+        - ctaImage
+        - ctaTitle
+  - id: ctaLink
+    name: CTA Link
+    type: link
+    helpText: ''
+    typeConfig:
+      linkTypes:
+        tel: false
+  - id: ctaImage
+    name: CTA Image
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+  - id: ctaTitle
+    name: CTA Title
+    type: text
+    helpText: ''
+    typeConfig: null
+categoryId: 8ec2b904-87b0-488a-88a3-e954f3ed9ff8
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-11-19T00:35:55.406361+00:00'
+updated: '2023-11-19T01:22:40.086261+00:00'

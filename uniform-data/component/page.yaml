@@ -10,17 +10,49 @@ parameters:
     helpText: ''
     typeConfig:
       required: false
+  - id: metaDescription
+    name: Meta Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: 5
 useTeamPermissions: true
 slots:
+  - id: header
+    name: Header
+    allowedComponents:
+      - $p:e6ed413a-f24e-4be1-aff4-5669be40e960
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
   - id: content
     name: Content
     allowedComponents:
       - $test
       - $personalization
       - productTileGrid
+      - hero
+      - productTileGrid
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
+  - id: footer
+    name: Footer
+    allowedComponents:
+      - $p:63c9777f-621a-4be9-a61f-09b10b63db92
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+defaults:
+  type: page
+  slots:
+    footer:
+      - type: footer
+        _pattern: 63c9777f-621a-4be9-a61f-09b10b63db92
+    header:
+      - type: navBar
+        _pattern: e6ed413a-f24e-4be1-aff4-5669be40e960
 slugSettings:
   unique: global
   required: 'yes'
@@ -28,5 +60,5 @@ slugSettings:
   regularExpressionMessage: ''
 titleParameter: metaTitle
 canBeComposition: true
-created: '2023-11-07T14:04:54.794951+00:00'
-updated: '2023-11-12T01:30:28.03997+00:00'
+created: '2023-09-19T01:31:33.171656+00:00'
+updated: '2023-11-19T19:18:39.007122+00:00'

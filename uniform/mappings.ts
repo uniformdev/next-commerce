@@ -5,3 +5,9 @@ export { productTileGridMapping } from '../components/uniform/product-tile-grid/
 
 export { heroMapping } from '../components/uniform/hero/mapping';
 
+export { productDetailPageMapping } from '../components/uniform/product-detail-page/mapping';
+export { productDescriptionMapping } from '../components/uniform/product-description/mapping';
+export { galleryMapping } from '../components/uniform/gallery/mapping';
+export { jsonldMapping } from '../components/uniform/jsonld/mapping';
+export { navBarMapping } from '../components/uniform/navbar/mapping';
+export { footerMapping } from '../components/uniform/footer/mapping';

@@ -1,45 +1,52 @@
 'use client';
 
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { createUrl } from 'lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
+import { GridTileImage } from '../grid-tile-image';
+import { Parameters, ProductImage, Slots } from './props';
 
-export function Gallery({ images }: { images: { src: string; altText: string }[] }) {
+export const GalleryComponent = ({ images }: ComponentProps<Parameters, Slots>) => {
+  let productImages = images?.filter((image: ProductImage) => image.fields?.type?.value === 'zoom');
+  if (!productImages?.length) {
+    productImages = images;
+  }
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const imageSearchParam = searchParams.get('image');
   const imageIndex = imageSearchParam ? parseInt(imageSearchParam) : 0;
 
   const nextSearchParams = new URLSearchParams(searchParams.toString());
-  const nextImageIndex = imageIndex + 1 < images.length ? imageIndex + 1 : 0;
+  const nextImageIndex = imageIndex + 1 < productImages?.length ? imageIndex + 1 : 0;
   nextSearchParams.set('image', nextImageIndex.toString());
   const nextUrl = createUrl(pathname, nextSearchParams);
-
   const previousSearchParams = new URLSearchParams(searchParams.toString());
-  const previousImageIndex = imageIndex === 0 ? images.length - 1 : imageIndex - 1;
+  const previousImageIndex = imageIndex === 0 ? productImages?.length - 1 : imageIndex - 1;
   previousSearchParams.set('image', previousImageIndex.toString());
   const previousUrl = createUrl(pathname, previousSearchParams);
 
   const buttonClassName =
     'h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center';
 
+  if (!productImages || productImages?.length <= 0) return null;
   return (
     <>
       <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden">
-        {images[imageIndex] && (
+        {productImages[imageIndex] && (
           <Image
             className="h-full w-full object-contain"
             fill
             sizes="(min-width: 1024px) 66vw, 100vw"
-            alt={images[imageIndex]?.altText as string}
-            src={images[imageIndex]?.src as string}
+            alt={productImages[imageIndex]?.fields?.altText?.value as string}
+            src={productImages[imageIndex]?.fields?.src?.value as string}
             priority={true}
           />
         )}
 
-        {images.length > 1 ? (
+        {productImages.length > 1 ? (
           <div className="absolute bottom-[15%] flex w-full justify-center">
             <div className="mx-auto flex h-11 items-center rounded-full border border-white bg-neutral-50/80 text-neutral-500 backdrop-blur dark:border-black dark:bg-neutral-900/80">
               <Link
@@ -64,29 +71,23 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
         ) : null}
       </div>
 
-      {images.length > 1 ? (
+      {productImages.length > 1 ? (
         <ul className="my-12 flex items-center justify-center gap-2 overflow-auto py-1 lg:mb-0">
-          {images.map((image, index) => {
+          {productImages.map((image, index) => {
             const isActive = index === imageIndex;
             const imageSearchParams = new URLSearchParams(searchParams.toString());
 
             imageSearchParams.set('image', index.toString());
-
+            const nextUrl = createUrl(pathname, imageSearchParams);
             return (
-              <li key={image.src} className="h-20 w-20">
+              <li key={image?.fields?.src?.value} className="h-20 w-20">
                 <Link
                   aria-label="Enlarge product image"
-                  href={createUrl(pathname, imageSearchParams)}
+                  href={nextUrl}
                   scroll={false}
                   className="h-full w-full"
                 >
-                  {/* <GridTileImage
-                    alt={image.altText}
-                    src={image.src}
-                    width={80}
-                    height={80}
-                    active={isActive}
-                  /> */}
+                  <GridTileImage image={image?.fields?.src?.value} active={isActive} />
                 </Link>
               </li>
             );
@@ -95,4 +96,4 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
       ) : null}
     </>
   );
-}
+};

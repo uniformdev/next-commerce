@@ -5,10 +5,8 @@ import { Parameters, Slots } from './props';
 export const HeroComponent = ({
   component,
   context,
-  title,
   description,
   image,
-  buttonTitle,
   buttonLink
 }: ComponentProps<Parameters, Slots>) => {
   return (
@@ -38,11 +36,7 @@ export const HeroComponent = ({
               className="inline-flex h-10 w-1/3 items-center justify-center rounded-md bg-[#FFC1C1] px-8 text-sm font-medium text-[#9400D3] shadow transition-colors hover:bg-[#FFB6C1] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#FFC1C1] disabled:pointer-events-none disabled:opacity-50 dark:bg-[#FFC1C1] dark:hover:bg-[#FFB6C1] dark:focus-visible:ring-[#FFC1C1]"
               href={buttonLink?.path ?? '#'}
             >
-              <UniformText
-                component={component}
-                context={context}
-                parameterId="buttonTitle"
-              />
+              <UniformText component={component} context={context} parameterId="buttonTitle" />
             </Link>
           </div>
         </div>

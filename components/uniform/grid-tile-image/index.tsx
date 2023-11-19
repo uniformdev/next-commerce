@@ -2,23 +2,30 @@ import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import clsx from 'clsx';
 import Label from 'components/label';
 import Image from 'next/image';
-import { Parameters, Slots } from './props';
+import Link from 'next/link';
+import { GridTileImageParameters } from './props';
+
+export const GridTileImageComponent = (props: ComponentProps<GridTileImageParameters>) => {
+  return <GridTileImage {...props} />;
+};
 
 export const GridTileImage = ({
-  name,
-  price,
+  name = '',
+  price = '',
   image,
+  url,
   isInteractive = false,
   active = false,
-  full
-}: ComponentProps<Parameters, Slots>) => {
+  full = false
+}: GridTileImageParameters) => {
   const position = full ? 'center' : 'bottom';
-  return (
+
+  const innerTile = (
     <div
       className={clsx(
         'group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-white hover:border-blue-600 dark:bg-black',
         {
-          relative: name,
+          relative: true,
           'border-2 border-blue-600': active,
           'border-neutral-200 dark:border-neutral-800': !active
         }
@@ -39,4 +46,5 @@ export const GridTileImage = ({
       {name ? <Label title={name} amount={price} currencyCode={'USD'} position={position} /> : null}
     </div>
   );
+  return url?.path ? <Link href={url?.path}>{innerTile}</Link> : innerTile;
 };

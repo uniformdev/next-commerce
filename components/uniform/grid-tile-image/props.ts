@@ -1,13 +1,11 @@
 import { LinkParamValue } from '@uniformdev/canvas';
 
-export type Parameters = {
-  name: string;
-  price: string;
-  image: string;
+export type GridTileImageParameters = {
+  image?: string;
+  active: boolean;
+  name?: string;
+  price?: string;
   url?: LinkParamValue;
-  full: boolean;
+  full?: boolean;
   isInteractive?: boolean;
-  active?: boolean;
 };
-
-export type Slots = string;

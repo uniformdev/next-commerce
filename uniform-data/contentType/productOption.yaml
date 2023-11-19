@@ -1,0 +1,23 @@
+id: productOption
+name: Product Option
+created: '2023-11-19T19:01:41.578538+00:00'
+updated: '2023-11-19T19:01:41.578538+00:00'
+slugSettings:
+  required: 'no'
+fields:
+  - id: name
+    name: Name
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: value
+    name: Value
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+entryName: name
+description: ''
+icon: play-list-check
+type: block

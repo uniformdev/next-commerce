@@ -8,12 +8,20 @@ composition:
       type: text
       value: Espresso Machines
   slots:
+    footer:
+      - _id: 1990e3fc-f62d-4e80-9248-b4f52a53ae81
+        type: footer
+        _pattern: 63c9777f-621a-4be9-a61f-09b10b63db92
+    header:
+      - _id: dd5c414d-de3e-4904-8f54-bfe6f6094119
+        type: navBar
+        _pattern: e6ed413a-f24e-4be1-aff4-5669be40e960
     content:
       - _id: 50e0a79f-7ce0-4a3b-85f2-5abb9ed92b37
         type: productTileGrid
         slots:
           tiles:
-            - _id: 3ffd9ee0-5cc9-4ae2-ba6b-3ff847e9bb2d
+            - _id: 5aec84ad-ea05-4727-b696-9f40898f8907
               type: gridTileImage
               _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
               _dataResources:
@@ -21,7 +29,7 @@ composition:
                   type: product
                   variables:
                     productIds: '117'
-            - _id: 3a3fa415-abb0-4c62-b8dc-6b9573c4180a
+            - _id: 8d5391d1-c0a6-4e1f-8431-7dae56b6323c
               type: gridTileImage
               _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
               _dataResources:
@@ -29,19 +37,19 @@ composition:
                   type: product
                   variables:
                     productIds: '118'
-            - _id: 8a2d09ed-d78c-41eb-aa72-4424a19d7d30
+            - _id: a9bb7a76-c547-4010-bc71-8fd6a9c5f4c5
               type: gridTileImage
               _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
               _dataResources:
                 Product:
                   type: product
                   variables:
-                    productIds: '145'
+                    productIds: '140'
         parameters:
           title:
             type: text
             value: Featured Machines
-      - _id: 8e7952a3-ad03-4294-ad0c-48da75a023d3
+      - _id: 3d4fa0ff-c4f9-4cbd-b7b0-abfc574a2e25
         type: productTileGrid
         _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
         _dataResources:
@@ -52,32 +60,14 @@ composition:
               limit: '5'
               keyword: ''
               sortField: price
-              categoryId: '23'
+              categoryId: '24'
               sortDirection: asc
-      - _id: c8f6187f-7603-46a3-ab25-6989ca396620
-        type: productTileGrid
-        _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
-        _dataResources:
-          Product Query:
-            type: productQuery
-            variables:
-              page: '1'
-              limit: '5'
-              keyword: ''
-              sortField: price
-              categoryId: '23'
-              sortDirection: desc
   _overrides:
-    8e7952a3-ad03-4294-ad0c-48da75a023d3:
+    3d4fa0ff-c4f9-4cbd-b7b0-abfc574a2e25:
       parameters:
         title:
           type: text
-          value: Most affordable way to make coffee
-    c8f6187f-7603-46a3-ab25-6989ca396620:
-      parameters:
-        title:
-          type: text
-          value: If budget is not an issue
-created: '2023-11-12T01:28:43.005139+00:00'
-modified: '2023-11-12T01:38:24.412068+00:00'
+          value: Most affordable espresso machines
+created: '2023-11-19T18:59:18.84568+00:00'
+modified: '2023-11-19T19:28:53.244388+00:00'
 pattern: false

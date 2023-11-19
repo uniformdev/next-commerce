@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: productDetailPage
+name: Product Detail Page
+icon: shopping-bag
+parameters:
+  - id: metaTitle
+    name: Meta Title
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: metaDescription
+    name: Meta Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: 5
+categoryId: 4e552690-edb9-47a0-8a71-d5752a28365b
+useTeamPermissions: true
+slots:
+  - id: header
+    name: Header
+    allowedComponents:
+      - $p:e6ed413a-f24e-4be1-aff4-5669be40e960
+      - jsonld
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+  - id: leftContent
+    name: Left Content
+    allowedComponents:
+      - $test
+      - $personalization
+      - productDescription
+      - gallery
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: rightContent
+    name: Right Content
+    allowedComponents:
+      - gallery
+      - $test
+      - $personalization
+      - productDescription
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: lowerRail
+    name: Lower Rail
+    allowedComponents:
+      - $p:0454d577-c8a1-4c3f-988e-6d6324da53aa
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+  - id: footer
+    name: Footer
+    maxComponents: 1
+    allowedComponents:
+      - $p:63c9777f-621a-4be9-a61f-09b10b63db92
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+defaults:
+  type: productDetailPage
+  slots:
+    meta:
+      - type: jsonld
+titleParameter: metaTitle
+canBeComposition: true
+created: '2023-11-19T18:59:10.924944+00:00'
+updated: '2023-11-19T19:35:57.226792+00:00'

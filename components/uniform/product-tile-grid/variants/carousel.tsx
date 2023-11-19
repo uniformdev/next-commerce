@@ -10,7 +10,7 @@ export const CarouselComponent = ({
 }: ComponentProps<Parameters, Slots>) => {
   const { isContextualEditing } = context;
   return (
-    <div className=" w-full overflow-x-auto pb-6 pt-1">
+    <div className="w-full overflow-x-auto pb-6 pt-6">
       <UniformText
         component={component}
         context={context}

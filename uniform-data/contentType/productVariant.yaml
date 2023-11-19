@@ -1,0 +1,33 @@
+id: productVariant
+name: Product Variant
+created: '2023-11-19T19:01:41.882783+00:00'
+updated: '2023-11-19T19:01:41.882783+00:00'
+slugSettings:
+  required: 'no'
+fields:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: id
+    name: Id
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: availableForSale
+    name: Available for Sale
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+  - id: price
+    name: Price
+    type: number
+    helpText: ''
+    typeConfig:
+      decimal: true
+entryName: title
+description: ''
+icon: file-document
+type: block

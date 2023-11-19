@@ -1,0 +1,29 @@
+asset:
+  type: image
+  _id: 34e4d955-07f6-48fc-865c-e79beba8567c
+  _name: ''
+  title:
+    type: text
+    value: github-mark.png
+  file:
+    type: file
+    value: 5740dbba-8fcc-47da-8223-08998a82815f
+  mediaType:
+    value: image/png
+    type: text
+  url:
+    value: >-
+      https://img.uniform.global/p/GprDNNHuRVCzJgMTr1LsyQ/FUGYBEU6RjKP8Npib2H4DQ-github-mark.png
+    type: text
+  size:
+    value: 6393
+    type: number
+  width:
+    value: 240
+    type: number
+  height:
+    value: 240
+    type: number
+  custom: {}
+created: '2023-11-19T19:48:19.141641+00:00'
+modified: '2023-11-19T19:48:19.141641+00:00'

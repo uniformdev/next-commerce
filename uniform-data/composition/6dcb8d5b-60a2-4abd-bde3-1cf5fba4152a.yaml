@@ -8,28 +8,20 @@ composition:
       type: text
       value: Coffee Beans
   slots:
+    footer:
+      - _id: 738c2b81-3c9e-406b-9a3b-4fb439c0fb39
+        type: footer
+        _pattern: 63c9777f-621a-4be9-a61f-09b10b63db92
+    header:
+      - _id: ddb6c3da-d282-4749-a56a-a6d239aa8e0d
+        type: navBar
+        _pattern: e6ed413a-f24e-4be1-aff4-5669be40e960
     content:
       - _id: 75fc8912-8b3b-407a-881b-5a32606ab39f
         type: productTileGrid
         slots:
           tiles:
-            - _id: b0c0b1cc-95d3-42a9-8cb0-be31b327704e
-              type: gridTileImage
-              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
-              _dataResources:
-                Product:
-                  type: product
-                  variables:
-                    productIds: '81'
-            - _id: 5a202886-6684-48a1-9793-15b36f8110c4
-              type: gridTileImage
-              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
-              _dataResources:
-                Product:
-                  type: product
-                  variables:
-                    productIds: '128'
-            - _id: 23f3b557-f847-45be-aa58-f7ed8968be23
+            - _id: 0bff4e0c-69c1-443d-a64c-8d6e0949b136
               type: gridTileImage
               _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
               _dataResources:
@@ -37,11 +29,27 @@ composition:
                   type: product
                   variables:
                     productIds: '113'
+            - _id: 4fe9858f-bf2a-4636-a844-03e35dc4a91d
+              type: gridTileImage
+              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _dataResources:
+                Product:
+                  type: product
+                  variables:
+                    productIds: '131'
+            - _id: 6a23afb3-14fb-4944-8fa7-da0360a0a9a7
+              type: gridTileImage
+              _pattern: acbdae81-250a-4db6-a057-3f15fb612d74
+              _dataResources:
+                Product:
+                  type: product
+                  variables:
+                    productIds: '133'
         parameters:
           title:
             type: text
             value: Featured Beans
-      - _id: 7ddb4278-f9b4-4ac3-9a54-fe64e68a8888
+      - _id: f4616221-15e7-49f4-b1ae-25c10092db23
         type: productTileGrid
         _pattern: 0454d577-c8a1-4c3f-988e-6d6324da53aa
         _dataResources:
@@ -50,16 +58,16 @@ composition:
             variables:
               page: '1'
               limit: '5'
-              keyword: ''
-              sortField: price
+              keyword: blend
+              sortField: ''
               categoryId: '27'
-              sortDirection: desc
+              sortDirection: asc
   _overrides:
-    7ddb4278-f9b4-4ac3-9a54-fe64e68a8888:
+    f4616221-15e7-49f4-b1ae-25c10092db23:
       parameters:
         title:
           type: text
-          value: Beans for the exquisite taste
-created: '2023-11-12T01:27:21.333072+00:00'
-modified: '2023-11-12T01:40:25.746477+00:00'
+          value: Our Blend Beans
+created: '2023-11-19T18:59:19.308246+00:00'
+modified: '2023-11-19T19:26:38.177412+00:00'
 pattern: false

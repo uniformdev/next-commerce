@@ -12,11 +12,11 @@ dependencies:
     specifier: ^2.0.18
     version: 2.0.18(react@18.2.0)
   '@uniformdev/canvas':
-    specifier: 19.76.0
-    version: 19.76.0
+    specifier: 19.78.1
+    version: 19.78.1
   '@uniformdev/canvas-next-rsc':
-    specifier: 19.76.0
-    version: 19.76.0(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 19.78.1
+    version: 19.78.1(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
@@ -53,8 +53,8 @@ devDependencies:
     specifier: ^2.5.3
     version: 2.5.3
   '@uniformdev/cli':
-    specifier: 19.76.0
-    version: 19.76.0(@types/node@20.8.9)(typescript@5.2.2)
+    specifier: 19.78.1
+    version: 19.78.1(@types/node@20.8.9)(typescript@5.2.2)
   '@vercel/git-hooks':
     specifier: ^1.0.0
     version: 1.0.0
@@ -762,59 +762,59 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@uniformdev/assets@19.76.0:
-    resolution: {integrity: sha512-cyDv9Dgyv7ezm4YteplvAxcwYxqVIEvf+RqrB4vgN81/tHzQDHHThP8zrhukU70bG4damz4luNhnwnrXWqEWWQ==}
+  /@uniformdev/assets@19.78.1:
+    resolution: {integrity: sha512-35zHA7YE3jGyXynl1o0QFtjqOUmPD4/5QfugHrZCReX2WsGN6SGnCn/P3e9+00phwg1mcTuDTyoQg+NRPDeMVQ==}
     dependencies:
-      '@uniformdev/context': 19.76.0
+      '@uniformdev/context': 19.78.1
 
-  /@uniformdev/canvas-next-rsc-client@19.76.0(next@14.0.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-hjh7sQ/FJxjtl2hREABCyqkPtUbonr48nHGgcaHG5x+10ueX+sk5tsG1QAk+Bz8eTi/MnVcqa1EmKYgkEHYXTQ==}
+  /@uniformdev/canvas-next-rsc-client@19.78.1(next@14.0.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ifgRs5Ofr6RIByJhxR++xS8P/xnBJJW3rjdblGik7XUVIEfgQPEg62EKCGGWFFoBjaHBmtaPz4qBURz3vgcong==}
     engines: {node: '>=16.14.0'}
     peerDependencies:
       next: '>=13.4.7'
       react: '>=18.2'
       react-dom: '>=18.2'
     dependencies:
-      '@uniformdev/canvas': 19.76.0
-      '@uniformdev/canvas-next-rsc-shared': 19.76.0(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)
-      '@uniformdev/canvas-react': 19.76.0(react-dom@18.2.0)(react@18.2.0)
+      '@uniformdev/canvas': 19.78.1
+      '@uniformdev/canvas-next-rsc-shared': 19.78.1(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)
+      '@uniformdev/canvas-react': 19.78.1(react-dom@18.2.0)(react@18.2.0)
       next: 14.0.1(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@uniformdev/canvas-next-rsc-shared@19.76.0(next@14.0.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-s7miRYTCphYBLBI1WsnsORZk9wrWwJVRrMRvvynO77lFJIg2u+FARMUqWPhPz9/bIY2ouF6qSWd3LUDIoMeeow==}
+  /@uniformdev/canvas-next-rsc-shared@19.78.1(next@14.0.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-DxSSXydiA616HznYwpmMCIRq1qmTA2/rEpr207yQ7Ast8Yb8h8bw+i6hh168eg/C5Xp47wLIoQMqq0w+VjgdwA==}
     engines: {node: '>=16.14.0'}
     peerDependencies:
       next: '>=13.4.7'
       react: '>=18.2'
       react-dom: '>=18.2'
     dependencies:
-      '@uniformdev/canvas': 19.76.0
-      '@uniformdev/context': 19.76.0
+      '@uniformdev/canvas': 19.78.1
+      '@uniformdev/context': 19.78.1
       next: 14.0.1(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@uniformdev/canvas-next-rsc@19.76.0(next@14.0.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-GQcMIwSu8QVmv9ti8vd/f/CTLuV+3HRswV0lHe8hvCVoixiCBSsfe+e04mzeRAMIMrpYAgf1o3lbNxwYgvaA7Q==}
+  /@uniformdev/canvas-next-rsc@19.78.1(next@14.0.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-qbhnRsZl8oj5EcmaH6DtOlNnrXx29M7ivQuBdZatBX6rKCSWcZwzEkbAuPOJiQUI5DR7ytY5C52ZvVElYpZ4KA==}
     engines: {node: '>=16.14.0'}
     peerDependencies:
       next: '>=13.4.7'
       react: '>=18.2'
       react-dom: '>=18.2'
     dependencies:
-      '@uniformdev/canvas': 19.76.0
-      '@uniformdev/canvas-next-rsc-client': 19.76.0(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)
-      '@uniformdev/canvas-next-rsc-shared': 19.76.0(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)
-      '@uniformdev/canvas-react': 19.76.0(react-dom@18.2.0)(react@18.2.0)
-      '@uniformdev/context': 19.76.0
-      '@uniformdev/project-map': 19.76.0
-      '@uniformdev/redirect': 19.76.0
-      '@uniformdev/richtext': 19.76.0
-      '@uniformdev/webhooks': 19.76.0
+      '@uniformdev/canvas': 19.78.1
+      '@uniformdev/canvas-next-rsc-client': 19.78.1(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)
+      '@uniformdev/canvas-next-rsc-shared': 19.78.1(next@14.0.1)(react-dom@18.2.0)(react@18.2.0)
+      '@uniformdev/canvas-react': 19.78.1(react-dom@18.2.0)(react@18.2.0)
+      '@uniformdev/context': 19.78.1
+      '@uniformdev/project-map': 19.78.1
+      '@uniformdev/redirect': 19.78.1
+      '@uniformdev/richtext': 19.78.1
+      '@uniformdev/webhooks': 19.78.1
       '@vercel/edge-config': 0.4.1
       encoding: 0.1.13
       next: 14.0.1(react-dom@18.2.0)(react@18.2.0)
@@ -824,38 +824,38 @@ packages:
       svix: 1.13.0(encoding@0.1.13)
     dev: false
 
-  /@uniformdev/canvas-react@19.76.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-UlnBy99g9+J3LcTSJyj/DavxzfDdvOHfXI0G8UqnuPzBbql3nMS2+toedNaU2FoYMkHWhjysmYHUVCaToLo+yw==}
+  /@uniformdev/canvas-react@19.78.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Abfssl+TidftV+V3N/cdvPfo2Iucy9jm1FT8hSrVdUrmLjLmWKb+AvLoRMnx/NFx7SPdimRsBfCEzF5fKJT2HQ==}
     peerDependencies:
       react: '>= 16 || 17 || 18'
       react-dom: '>=16'
     dependencies:
-      '@uniformdev/canvas': 19.76.0
-      '@uniformdev/context': 19.76.0
-      '@uniformdev/context-react': 19.76.0(react-dom@18.2.0)(react@18.2.0)
-      '@uniformdev/richtext': 19.76.0
+      '@uniformdev/canvas': 19.78.1
+      '@uniformdev/context': 19.78.1
+      '@uniformdev/context-react': 19.78.1(react-dom@18.2.0)(react@18.2.0)
+      '@uniformdev/richtext': 19.78.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@uniformdev/canvas@19.76.0:
-    resolution: {integrity: sha512-YK9R8qi9caTX+mcev1/EHQH8+IMBjX2wpra3y1gVaC1pJRu0OqfbHvIHzogaUP9D+LMQur+6ro/976oVdxrI8A==}
+  /@uniformdev/canvas@19.78.1:
+    resolution: {integrity: sha512-ZOpgLL6pLeqmwc3AFEurIrQCk+RvUeAH6IeB+2SeLEaNqoUIBmhIYYrkzk4t+Sep9q9N9JyQLD2O6tndaXGyTA==}
     dependencies:
-      '@uniformdev/assets': 19.76.0
-      '@uniformdev/context': 19.76.0
+      '@uniformdev/assets': 19.78.1
+      '@uniformdev/context': 19.78.1
       immer: 9.0.21
 
-  /@uniformdev/cli@19.76.0(@types/node@20.8.9)(typescript@5.2.2):
-    resolution: {integrity: sha512-HgE+0by49K3lfGZwXmWtK3xSTY24OiHA8Pl+r3jFpOKq6g+Y8jQVbu0lv4WVYoCkXhNZGw6210wI+JmCoVaXkw==}
+  /@uniformdev/cli@19.78.1(@types/node@20.8.9)(typescript@5.2.2):
+    resolution: {integrity: sha512-J3S5fRy+w926uJxUO5JvUc607l3Nkgli518EYxH58QVM98JYIFqznyVZX0+adRdk0z4/azNF5cu9iBQUJDprsw==}
     hasBin: true
     dependencies:
       '@thi.ng/mime': 2.2.28
-      '@uniformdev/assets': 19.76.0
-      '@uniformdev/canvas': 19.76.0
-      '@uniformdev/context': 19.76.0
-      '@uniformdev/files': 19.76.0
-      '@uniformdev/project-map': 19.76.0
-      '@uniformdev/redirect': 19.76.0
+      '@uniformdev/assets': 19.78.1
+      '@uniformdev/canvas': 19.78.1
+      '@uniformdev/context': 19.78.1
+      '@uniformdev/files': 19.78.1
+      '@uniformdev/project-map': 19.78.1
+      '@uniformdev/redirect': 19.78.1
       call-bind: 1.0.5
       colorette: 2.0.20
       cosmiconfig: 8.3.6(typescript@5.2.2)
@@ -891,21 +891,21 @@ packages:
       - typescript
     dev: true
 
-  /@uniformdev/context-react@19.76.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-MoC74CW+itIHcxfUVwPnux/Ucq+S1KIt4z8thZnBWwu9gpyZh+KRbIvHwZZP2mXLA/2WQqcRV/eAOMXfiwUV4Q==}
+  /@uniformdev/context-react@19.78.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-BaSvdqFXXETyIHaS5rsLRwO3LGp7NzIA0w1iyTouF+RxvUl2Dt2AwTfJpWZHa3KnhRabezoaxyvq7AS/mJRN9Q==}
     peerDependencies:
       react: '>=16.13.1 || 17 || 18'
       react-dom: '>=16.13.1'
     dependencies:
-      '@uniformdev/context': 19.76.0
+      '@uniformdev/context': 19.78.1
       cookie: 0.5.0
       dequal: 2.0.3
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@uniformdev/context@19.76.0:
-    resolution: {integrity: sha512-475o4ae/t5Q+FNv2vFKBqyVkxo21sHwMdNq1a7leUrFZpMRQjHaasdRPI4P80kGKvXGA8ivKmiyGWMZEOxVixg==}
+  /@uniformdev/context@19.78.1:
+    resolution: {integrity: sha512-Hw9VJI2mJ+wpXmj+KLZJ5IyX3cbnx8RUG2ZWkvHa/bshSOFe3Rs8tWGA1fU6JhsQb7EN1Jrz+kcR3m32zfX83Q==}
     dependencies:
       dequal: 2.0.3
       js-cookie: 3.0.5
@@ -913,31 +913,31 @@ packages:
       p-limit: 3.1.0
       rfdc: 1.3.0
 
-  /@uniformdev/files@19.76.0:
-    resolution: {integrity: sha512-ag9bQujkHdSGEgvXBFR2Q1PrgnSsZ+yxnzs+K4q480tu9xhNkzqS3GZpVTXmpWvrJLAs6i3Uxmt2YMKQw/ByJQ==}
+  /@uniformdev/files@19.78.1:
+    resolution: {integrity: sha512-BeOxUENkQPiZrSvRlfhC01jKWuDkndfLUztb+FdXTpqjhTXtWaHhP9OKLYMjmE5dtbCh/A8o1taq+S8Bj2ezwg==}
     dependencies:
-      '@uniformdev/context': 19.76.0
+      '@uniformdev/context': 19.78.1
     dev: true
 
-  /@uniformdev/project-map@19.76.0:
-    resolution: {integrity: sha512-3BTSwCncCD1UP1/0lAErvHmWj5qq1/KVSB1UAcXpi+edeaTgRFKtgOnK/J71/AnEbTXc911L00L9hEnuSQknTw==}
+  /@uniformdev/project-map@19.78.1:
+    resolution: {integrity: sha512-GgtIt9yvROo0lMuzfRJT0ynRwYbJuRlE1rvkBN2P/lFUk5czFbJhSjgTgahb64DXwuzAt6X0JV9SynqexcLHfA==}
     dependencies:
-      '@uniformdev/canvas': 19.76.0
-      '@uniformdev/context': 19.76.0
+      '@uniformdev/canvas': 19.78.1
+      '@uniformdev/context': 19.78.1
 
-  /@uniformdev/redirect@19.76.0:
-    resolution: {integrity: sha512-BlclKljkOTrWH1wwOEbCfiZEW3k4xcunvpfiPduDx5C9h7qxO6ygQUYw0/6Vuoi/fDXBjQkC6Epb7YNUxN5yhQ==}
+  /@uniformdev/redirect@19.78.1:
+    resolution: {integrity: sha512-OhKTosu3sGJ27TndoCoAhROkjLusbAgjO6F+OJHDIiSI82r275Gxp87m/QmLGeuNtSS7V8wiWrXdmSJ0WhChCg==}
     dependencies:
-      '@uniformdev/context': 19.76.0
+      '@uniformdev/context': 19.78.1
       p-limit: 3.1.0
       rfdc: 1.3.0
 
-  /@uniformdev/richtext@19.76.0:
-    resolution: {integrity: sha512-y2uttcGvS3NKa17LUzdyNyb6zcpv4U75qESpenVTaeiKInMmxTtPx8/1kpb3XyptswAT4shJhSpYFt7mbB0JlA==}
+  /@uniformdev/richtext@19.78.1:
+    resolution: {integrity: sha512-sPigmdPcalhyVYJ/F9tV9AEuZYUkoJpkmaSM+KljHR4UBL/fwRbc4naHtkG8XphCbZnuX17ZOQ/m34mQSgIVqA==}
     dev: false
 
-  /@uniformdev/webhooks@19.76.0:
-    resolution: {integrity: sha512-JWu0x8DLFZ0LvMF0RgJK6Nc/qwIjTxs4/5xYr/mF/bz/tDgshOdSvCiWF9MHCKtUZ6YFM+XdBD9WWFWXRHBs2A==}
+  /@uniformdev/webhooks@19.78.1:
+    resolution: {integrity: sha512-A6Sbbk0nBcr0aOX+HcndnCE2EWC9Fzux6sRqFiBWFMEd93O7ydDmLeJx66dpauKF6/lyJrquCGeybAMTa8FkTQ==}
     dependencies:
       zod: 3.22.4
     dev: false
@@ -1269,7 +1269,7 @@ packages:
     dev: true
 
   /buffer-equal-constant-time@1.0.1:
-    resolution: {integrity: sha1-+OcRMvf/5uAaXJaXpMbz5I1cyBk=}
+    resolution: {integrity: sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA==}
     dev: true
 
   /buffer-from@1.1.2:
