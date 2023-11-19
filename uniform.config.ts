@@ -6,7 +6,7 @@ const config: CLIConfiguration = {
   serialization: {
     format: 'yaml',
     mode: 'mirror',
-    directory: './uniform-data',
+    directory: './uniform-data/mock',
     entitiesConfig: {
       composition: {
         publish: true,
