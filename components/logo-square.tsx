@@ -2,6 +2,10 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 export default function LogoSquare({ logo, size }: { size?: 'sm' | undefined; logo: any }) {
+  let logoSrc = logo?.[0]?.fields?.url?.value;
+  if (!logoSrc) {
+    logoSrc = '/nextcommerce.svg';
+  }
   return (
     <div
       className={clsx(
@@ -13,7 +17,7 @@ export default function LogoSquare({ logo, size }: { size?: 'sm' | undefined; lo
       )}
     >
       <Image
-        src={logo?.[0]?.url}
+        src={logoSrc}
         className={clsx({
           'h-[16px] w-[16px]': !size,
           'h-[10px] w-[10px]': size === 'sm'
