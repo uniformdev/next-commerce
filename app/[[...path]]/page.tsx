@@ -8,10 +8,10 @@ import {
 import { resolveComponent } from 'uniform/resolve';
 
 // Enabled edge runtime for the maximum oompf
-export const runtime = 'edge';
+//export const runtime = 'edge';
 
 // If you wanna go static, remove the runtime directive above and uncomment this line
-// export { generateStaticParams } from '@uniformdev/canvas-next-rsc';
+export { generateStaticParams } from '@uniformdev/canvas-next-rsc';
 
 export const metadata = {
   description: 'High-performance ecommerce store built with Next.js, Vercel, and Uniform',
@@ -40,7 +40,7 @@ export default async function HomePage(props: PageParameters) {
         {...props}
         route={route}
         resolveComponent={resolveComponent}
-        mode="server"
+        mode="static"
       />
     </>
   );
