@@ -14,6 +14,7 @@ export const FooterComponent = ({
   ctaTitle,
   menu
 }: ComponentProps<Parameters, Slots>) => {
+  const ctaImageSrc = ctaImage?.[0]?.fields?.url?.value;
   // const currentYear = new Date().getFullYear();
   // const copyrightDate = 2023 + (currentYear > 2023 ? `-${currentYear}` : '');
   return (
@@ -32,15 +33,11 @@ export const FooterComponent = ({
             aria-label="Deploy on Vercel"
             href={ctaLink?.path}
           >
-            <span className="px-3">
-              <Image
-                src={ctaImage?.[0]?.url}
-                alt={siteName}
-                width={16}
-                height={16}
-                loading="lazy"
-              />
-            </span>
+            {ctaImageSrc ? (
+              <span className="px-3">
+                <Image src={ctaImageSrc} alt={siteName} width={16} height={16} loading="lazy" />
+              </span>
+            ) : null}
             <hr className="h-full border-r border-neutral-200 dark:border-neutral-700" />
             <span className="px-3">{ctaTitle}</span>
           </a>
